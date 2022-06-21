@@ -18,7 +18,7 @@ int Count(struct node *head, int searchFor) {
 
 int main() {
     int i;
-    struct node *list;
+    struct node *list = NULL;
     BuildOneTwoThree(&list);
     i = Count(list, 1);
     printf("i = %d\n", i);
