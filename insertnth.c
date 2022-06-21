@@ -11,7 +11,12 @@
 
 void InsertNth(struct node **headRef, int index, int data) {
     assert(index >= 0 && index <= Length(*headRef));
-    
+    // handle empty list case
+    if(*headRef == NULL) {
+        Push(headRef, data);
+        return;
+    }
+
     struct node *newNode = malloc(sizeof(struct node*));
     newNode->data = data;
 
@@ -33,6 +38,7 @@ void InsertNth(struct node **headRef, int index, int data) {
         prev = current;
         current = current->next;
     }
+    return;
 }
 
 
