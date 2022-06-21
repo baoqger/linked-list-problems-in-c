@@ -24,5 +24,6 @@ int main() {
     int c = Pop(&head);
     printf("pop value: %d\n", c);
     int len = Length(head);
-    printf("length = %d\n", len);
+    printf("length = %d\n", len); 
+    
 }

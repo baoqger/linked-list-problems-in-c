@@ -8,6 +8,8 @@ deletelist: linked-list.c deletelist.c
 	gcc linked-list.c deletelist.c -Wall -g -o $@
 pop: linked-list.c pop.c
 	gcc linked-list.c pop.c -Wall -g -o $@
+insertnth: linked-list.c insertnth.c
+	gcc linked-list.c insertnth.c -Wall -g -o $@
 clean:
 	rm basiccaller
 	
