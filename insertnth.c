@@ -41,20 +41,39 @@ void InsertNth(struct node **headRef, int index, int data) {
     return;
 }
 
+// the following implementation is calling Push() function
+void InsertNthByPush(struct node **headRef, int index, int data) {
+    // position 0 is a special case
+    if (index == 0) {
+        Push(headRef, data);
+    } else {
+        struct node *current = *headRef;
+        int i;
+        for(i = 0; i<index -1; i++) {
+            assert(current != NULL);
+            current = current->next;
+        }
+        assert(current != NULL);
+        Push(&(current->next), data);
+    }
+}
 
 int main() {
     struct node *head = NULL;
     Push(&head, 1);
     ListPrint(head); // {1}
     
-    InsertNth(&head, 0, 2);
+    InsertNthByPush(&head, 0, 2);
+    // InsertNth(&head, 0, 2);
 
     ListPrint(head); // {2, 1}
 
-    InsertNth(&head, 1, 3);
+    InsertNthByPush(&head, 1, 3);
+    // InsertNth(&head, 1, 3);
     ListPrint(head); // {2, 3,1}
     
-    InsertNth(&head, 3, 5); 
+    InsertNthByPush(&head, 3, 5);
+    // InsertNth(&head, 3, 5); 
 
     ListPrint(head); // {2, 3, 1, 5} 
     return 0;
