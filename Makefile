@@ -6,6 +6,8 @@ getnth: linked-list.c getnth.c
 	gcc linked-list.c getnth.c -Wall -g -o $@
 deletelist: linked-list.c deletelist.c
 	gcc linked-list.c deletelist.c -Wall -g -o $@
+pop: linked-list.c pop.c
+	gcc linked-list.c pop.c -Wall -g -o $@
 clean:
 	rm basiccaller
 	
