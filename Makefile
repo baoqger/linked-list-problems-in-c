@@ -12,6 +12,8 @@ insertnth: linked-list.c insertnth.c
 	gcc linked-list.c insertnth.c -Wall -g -o $@
 sortedinsert: linked-list.c sortedinsert.c
 	gcc linked-list.c sortedinsert.c -Wall -g -o $@
+reverse: linked-list.c reverse.c
+	gcc linked-list.c reverse.c -Wall -g -o $@
 clean:
 	rm basiccaller
 	
